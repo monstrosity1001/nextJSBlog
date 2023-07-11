@@ -1,12 +1,7 @@
-game *,
-board *,
-square * {
+.square,
+.winningSquare,
+.drawSquare {
     box-sizing: border-box;
-}
-
-square,
-winningSquare,
-drawSquare {
     background: #fff;
     border: 1px solid #999;
     float: left;
@@ -21,29 +16,29 @@ drawSquare {
     width: 34px;
 }
 
-boardRow:after {
+.boardRow:after {
     clear: both;
     content: "";
     display: table;
 }
 
-status {
+.status {
     margin-bottom: 10px;
 }
 
-game {
+.game {
     display: flex;
     flex-direction: row;
 }
 
-gameInfo {
+.gameInfo {
     margin-left: 20px;
 }
 
-winningSquare {
+.winningSquare {
     background: #ff10f0;
 }
 
-drawSquare {
+.drawSquare {
     background: #9a7b4f;
 }
