@@ -1,5 +1,5 @@
 import { useState } from "react";
-import"../../styles/TicTacToe.css";
+import styles from "../../styles/TicTacToe.module.css";
 
 export default function Game() {
   const [history, setHistory] = useState([Array(9).fill(null)]);
@@ -57,8 +57,8 @@ export default function Game() {
   });
 
   return (
-    <div className="game">
-      <div className="game-board">
+    <div className={styles.game}>
+      <div className={styles.gameBoard}>
         <Board
           isXGo={isXGo}
           allSquares={currentSquares}
@@ -72,7 +72,7 @@ export default function Game() {
           {moveOrderAscending ? "Sort Descending" : "Sort Ascending"}
         </button>
       </div>
-      <div className="game-info">
+      <div className={styles.gameInfo}>
         <ol>{moveOrderAscending ? moveList : [...moveList].reverse()}</ol>
       </div>
     </div>
@@ -108,7 +108,7 @@ function Board({ isXGo, allSquares, onPlay, rowDecide, colDecide }) {
   return (
     <>
       {[...Array(3)].map((_, i) => (
-        <div className="board-row" key={i}>
+        <div className={styles.boardRow} key={i}>
           {[...Array(3)].map((_, j) => {
             const index = i * 3 + j;
 
@@ -123,18 +123,18 @@ function Board({ isXGo, allSquares, onPlay, rowDecide, colDecide }) {
           })}
         </div>
       ))}
-      <div className="status">{message}</div>
+      <div className={styles.status}>{message}</div>
     </>
   );
 }
 
 function Square({ fillValue, onSquareClick, isWinner, isDraw }) {
   if (isDraw) {
-    return <button className="drawSquare">{fillValue}</button>;
+    return <button className={styles.drawSquare}>{fillValue}</button>;
   } else {
     return (
       <button
-        className={isWinner ? "winningSquare" : "square"}
+        className={isWinner ? styles.winningSquare : styles.square}
         onClick={onSquareClick}
       >
         {fillValue}
