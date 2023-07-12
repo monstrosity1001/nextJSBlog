@@ -24,8 +24,8 @@ export default function Home({ allPostsData }) {
         <p>
           I built this with Next.js!
         </p>
-        <Link href="/posts/first-post">
-          <button>Go to my first post</button>
+        <Link href="/TicTacToe">
+          <button>Play Tic Tac Toe (Developed with React)</button>
         </Link>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>

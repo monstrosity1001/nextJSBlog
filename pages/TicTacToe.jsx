@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "../../styles/TicTacToe.module.css";
+import styles from "../styles/TicTacToe.module.css";
 import Link from "next/link";
 
 export default function Game() {
