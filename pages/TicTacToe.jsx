@@ -77,7 +77,7 @@ export default function Game() {
         <ol>{moveOrderAscending ? moveList : [...moveList].reverse()}</ol>
       </div>
       <div className={styles.goBackButton}>
-        <Link href='/posts/first-post'>Go back</Link>
+        <Link href='/'>Go back</Link>
       </div>
     </div>
   );
