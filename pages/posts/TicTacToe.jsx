@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "../../styles/TicTacToe.module.css";
+import Link from "next/link";
 
 export default function Game() {
   const [history, setHistory] = useState([Array(9).fill(null)]);
@@ -74,6 +75,9 @@ export default function Game() {
       </div>
       <div className={styles.gameInfo}>
         <ol>{moveOrderAscending ? moveList : [...moveList].reverse()}</ol>
+      </div>
+      <div>
+        <Link href='/posts/first-post'>Go back</Link>
       </div>
     </div>
   );
