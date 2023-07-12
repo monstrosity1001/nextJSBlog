@@ -42,3 +42,7 @@
 .drawSquare {
     background: #9a7b4f;
 }
+
+.goBackButton {
+    border: 16px solid white;
+}
