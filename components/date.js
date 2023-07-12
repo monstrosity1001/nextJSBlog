@@ -6,7 +6,7 @@ export default function Date({dateString}) {
         return null; 
     }
 
-    const date = parseISO({dateString});
+    const date = parseISO(dateString);
 
     if (isNaN(date)) {
         console.warn(`dateString "${dateString}" is not a valid date.`);
@@ -19,3 +19,4 @@ export default function Date({dateString}) {
         </time>
     );
 }
+
